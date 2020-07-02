@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{79ECAAEC-7457-4524-A6E1-4AA844571F9B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ODS</RootNamespace>
+    <AssemblyName>ODS</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>my_computer2.ico</ApplicationIcon>
+    <ManifestCertificateThumbprint>6537B5E11F413814F147C64DFD9916BDEA042630</ManifestCertificateThumbprint>
+    <ManifestKeyFile>DAS_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <TargetZone>LocalIntranet</TargetZone>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.MSWinsockLib">
+      <HintPath>C:\OCX\DLL\AxInterop.MSWinsockLib.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.CalcEngine, Version=9.35.20161.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.Excel, Version=9.35.20161.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.Localization, Version=9.20.20161.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.PDF, Version=9.35.20161.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.PluginCalendar.WinForms, Version=9.35.20161.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.Win, Version=9.35.20161.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.Win.Chart, Version=9.35.20161.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.Win.Spread, Version=9.35.20161.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.PluginInputMan, Version=9.35.20161.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="Iocomp.Instrumentation.WF35.Common, Version=4.0.6.14122, Culture=neutral, PublicKeyToken=a217a64fde564c89" />
+    <Reference Include="Iocomp.Instrumentation.WF35.Plot, Version=4.0.6.14162, Culture=neutral, PublicKeyToken=a217a64fde564c89" />
+    <Reference Include="Iocomp.Instrumentation.WF35.Pro, Version=4.0.6.14164, Culture=neutral, PublicKeyToken=a217a64fde564c89" />
+    <Reference Include="Iocomp.Instrumentation.WF35.Std, Version=4.0.6.14166, Culture=neutral, PublicKeyToken=a217a64fde564c89" />
+    <Reference Include="Ivi.Visa.Interop, Version=5.0.0.0, Culture=neutral, PublicKeyToken=a128c98f1d7717c1, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Ivi.Visa.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AXDev.cs" />
+    <Compile Include="AXHD.cs" />
+    <Compile Include="AXHS.cs" />
+    <Compile Include="AXL.cs" />
+    <Compile Include="AXM.cs" />
+    <Compile Include="CanControl.cs" />
+    <Compile Include="ImageButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="iniClass.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="ConfigSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigSet.designer.cs">
+      <DependentUpon>ConfigSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OdsPublic.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IOControl.cs" />
+    <Compile Include="LedBulb.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MotionControl.cs" />
+    <Compile Include="OptSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptSetting.designer.cs">
+      <DependentUpon>OptSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordCheckForm.designer.cs">
+      <DependentUpon>PasswordCheckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordSetForm.designer.cs">
+      <DependentUpon>PasswordSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCANBasic.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UniDAQ.cs" />
+    <EmbeddedResource Include="ConfigSet.resx">
+      <DependentUpon>ConfigSet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptSetting.resx">
+      <DependentUpon>OptSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordCheckForm.resx">
+      <DependentUpon>PasswordCheckForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordSetForm.resx">
+      <DependentUpon>PasswordSetForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DAS_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxFPSpreadADO">
+      <Guid>{F856EC8B-F03C-4515-BDC6-64CBD617566A}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxTeeChart">
+      <Guid>{B6C10482-FB89-11D4-93C9-006008A7EED4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxXtremeSuiteControls">
+      <Guid>{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}</Guid>
+      <VersionMajor>15</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="FPSpreadADO">
+      <Guid>{F856EC8B-F03C-4515-BDC6-64CBD617566A}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="TeeChart">
+      <Guid>{B6C10482-FB89-11D4-93C9-006008A7EED4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="XtremeSuiteControls">
+      <Guid>{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}</Guid>
+      <VersionMajor>15</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Image\내가 쓰는것들\WinXP\Stop.ico" />
+    <None Include="Image\내가 쓰는것들\WinXP\2.ICO" />
+    <None Include="ICON_이것만 쓰자\02 - PDF Files White.ico" />
+    <None Include="ICON_이것만 쓰자\03 - Excel Blue.ico" />
+    <None Include="ICON_이것만 쓰자\04 - Excel White.ico" />
+    <None Include="ICON_이것만 쓰자\12 - AI Files White.ico" />
+    <None Include="ICON_이것만 쓰자\0041.ico" />
+    <None Include="ICON_이것만 쓰자\79.ico" />
+    <None Include="ICON_이것만 쓰자\185.ico" />
+    <None Include="ICON_이것만 쓰자\248.ico" />
+    <None Include="ICON_이것만 쓰자\5513.ico" />
+    <None Include="ICON_이것만 쓰자\5514.ico" />
+    <None Include="ICON_이것만 쓰자\5546.ico" />
+    <None Include="ICON_이것만 쓰자\android-ico.ico" />
+    <None Include="ICON_이것만 쓰자\Audio Symbol 02.ico" />
+    <None Include="ICON_이것만 쓰자\Battery Options.ico" />
+    <None Include="ICON_이것만 쓰자\Battery.ico" />
+    <None Include="ICON_이것만 쓰자\Bitlocker Encryption.ico" />
+    <None Include="ICON_이것만 쓰자\Bluetooth.ico" />
+    <None Include="ICON_이것만 쓰자\Camera.ico" />
+    <None Include="ICON_이것만 쓰자\Card reader %28black%29.ico" />
+    <None Include="ICON_이것만 쓰자\CD.ico" />
+    <None Include="ICON_이것만 쓰자\Change Disk.ico" />
+    <None Include="ICON_이것만 쓰자\Children Restricted.ico" />
+    <None Include="ICON_이것만 쓰자\Configurations.ico" />
+    <None Include="ICON_이것만 쓰자\Contacts Blue.ico" />
+    <None Include="ICON_이것만 쓰자\Contacts White.ico" />
+    <None Include="ICON_이것만 쓰자\Contacts.ico" />
+    <None Include="ICON_이것만 쓰자\Control Panel.ico" />
+    <None Include="ICON_이것만 쓰자\Cord4.ico" />
+    <None Include="ICON_이것만 쓰자\Danger Shield.ico" />
+    <None Include="ICON_이것만 쓰자\Date.ico" />
+    <None Include="ICON_이것만 쓰자\Delete.ico" />
+    <None Include="ICON_이것만 쓰자\Document.ico" />
+    <None Include="ICON_이것만 쓰자\Documents.ico" />
+    <None Include="ICON_이것만 쓰자\Downloads.ico" />
+    <None Include="ICON_이것만 쓰자\Eject.ico" />
+    <None Include="ICON_이것만 쓰자\Error.ico" />
+    <None Include="ICON_이것만 쓰자\Etc0149.ico" />
+    <None Include="ICON_이것만 쓰자\Explorer.ico" />
+    <None Include="ICON_이것만 쓰자\Favorites.ico" />
+    <None Include="ICON_이것만 쓰자\Firewall.ico" />
+    <None Include="ICON_이것만 쓰자\Flash drive %28black%29.ico" />
+    <None Include="ICON_이것만 쓰자\Flash drive %28green%29.ico" />
+    <None Include="ICON_이것만 쓰자\Flash drive %28pink%29.ico" />
+    <None Include="ICON_이것만 쓰자\Flash Live Icon 12.ico" />
+    <None Include="ICON_이것만 쓰자\Floppy Drive.ico" />
+    <None Include="ICON_이것만 쓰자\Flyer.ico" />
+    <None Include="ICON_이것만 쓰자\Folder - Home.ico" />
+    <None Include="ICON_이것만 쓰자\Gaming Console.ico" />
+    <None Include="ICON_이것만 쓰자\Genuine Advantage.ico" />
+    <None Include="ICON_이것만 쓰자\Good.ico" />
+    <None Include="ICON_이것만 쓰자\HDD %28blue%29.ico" />
+    <None Include="ICON_이것만 쓰자\HDD %28yellow%29.ico" />
+    <None Include="ICON_이것만 쓰자\HDD Firewire.ico" />
+    <None Include="ICON_이것만 쓰자\HDD USB.ico" />
+    <None Include="ICON_이것만 쓰자\imageres_22_11.ico" />
+    <None Include="ICON_이것만 쓰자\imageres_189_11.ico" />
+    <None Include="ICON_이것만 쓰자\Installation Package.ico" />
+    <None Include="ICON_이것만 쓰자\Internal Drive.ico" />
+    <None Include="ICON_이것만 쓰자\Joystick.ico" />
+    <None Include="ICON_이것만 쓰자\Keyboard.ico" />
+    <None Include="ICON_이것만 쓰자\Keys.ico" />
+    <None Include="ICON_이것만 쓰자\Loudspeaker.ico" />
+    <None Include="ICON_이것만 쓰자\Memory card SD.ico" />
+    <None Include="ICON_이것만 쓰자\Microsoft Management Console.ico" />
+    <None Include="ICON_이것만 쓰자\Mobility Options.ico" />
+    <None Include="ICON_이것만 쓰자\mobsync.ico" />
+    <None Include="ICON_이것만 쓰자\Mouse.ico" />
+    <None Include="ICON_이것만 쓰자\mspaint.ico" />
+    <None Include="ICON_이것만 쓰자\Music.ico" />
+    <None Include="ICON_이것만 쓰자\My Documents.ico" />
+    <None Include="ICON_이것만 쓰자\My Documents2.ico" />
+    <None Include="ICON_이것만 쓰자\My PC 01.ico" />
+    <None Include="ICON_이것만 쓰자\Nano Black.ico" />
+    <None Include="ICON_이것만 쓰자\ncRadio.ico" />
+    <None Include="ICON_이것만 쓰자\Net Drive Disconnected.ico" />
+    <None Include="ICON_이것만 쓰자\Network.ico" />
+    <None Include="ICON_이것만 쓰자\notebook-ico.ico" />
+    <None Include="ICON_이것만 쓰자\Notepad.ico" />
+    <None Include="ICON_이것만 쓰자\Offline Web Pages.ico" />
+    <None Include="ICON_이것만 쓰자\Pad Lock.ico" />
+    <None Include="ICON_이것만 쓰자\Pad_Lock2.ico" />
+    <None Include="ICON_이것만 쓰자\Pad_Lock3.ico" />
+    <None Include="ICON_이것만 쓰자\Pad_Unlock_36Pixel1.ico" />
+    <None Include="ICON_이것만 쓰자\Pad_Unlock_36Pixel2.ico" />
+    <None Include="ICON_이것만 쓰자\Pad_Unlock1 %281%29.ico" />
+    <None Include="ICON_이것만 쓰자\Pad_Unlock1 %282%29.ico" />
+    <None Include="ICON_이것만 쓰자\Parental.ico" />
+    <None Include="ICON_이것만 쓰자\PCI-card.ico" />
+    <None Include="ICON_이것만 쓰자\PDA.ico" />
+    <None Include="ICON_이것만 쓰자\Performance Report.ico" />
+    <None Include="ICON_이것만 쓰자\Performance.ico" />
+    <None Include="ICON_이것만 쓰자\Pic.ico" />
+    <None Include="ICON_이것만 쓰자\PLAYLIST.ico" />
+    <None Include="ICON_이것만 쓰자\Printer.ico" />
+    <None Include="ICON_이것만 쓰자\Private Badge.ico" />
+    <None Include="ICON_이것만 쓰자\ReadyBoost.ico" />
+    <None Include="ICON_이것만 쓰자\Recent Items.ico" />
+    <None Include="ICON_이것만 쓰자\Recycle Bin Full.ico" />
+    <None Include="ICON_이것만 쓰자\Register Windows.ico" />
+    <None Include="ICON_이것만 쓰자\RemoteControl.ico" />
+    <None Include="ICON_이것만 쓰자\Restricted.ico" />
+    <None Include="ICON_이것만 쓰자\Right.ico" />
+    <None Include="ICON_이것만 쓰자\Safe Shield.ico" />
+    <None Include="ICON_이것만 쓰자\Search.ico" />
+    <None Include="ICON_이것만 쓰자\Security Center.ico" />
+    <None Include="ICON_이것만 쓰자\Smartcard.ico" />
+    <None Include="ICON_이것만 쓰자\Start Menu.ico" />
+    <None Include="ICON_이것만 쓰자\Stop.ico" />
+    <None Include="ICON_이것만 쓰자\Sync.ico" />
+    <None Include="ICON_이것만 쓰자\System Configurations.ico" />
+    <None Include="ICON_이것만 쓰자\Tablet PC.ico" />
+    <None Include="ICON_이것만 쓰자\Tablet Pen.ico" />
+    <None Include="ICON_이것만 쓰자\Taskmgr.ico" />
+    <None Include="ICON_이것만 쓰자\Typing.ico" />
+    <None Include="ICON_이것만 쓰자\UPS.ico" />
+    <None Include="ICON_이것만 쓰자\USB Drive.ico" />
+    <None Include="ICON_이것만 쓰자\USB logo.ico" />
+    <None Include="ICON_이것만 쓰자\User Account Control.ico" />
+    <None Include="ICON_이것만 쓰자\User Account.ico" />
+    <None Include="ICON_이것만 쓰자\User Folder.ico" />
+    <None Include="ICON_이것만 쓰자\Warning Shield.ico" />
+    <None Include="ICON_이것만 쓰자\Welcome Center.ico" />
+    <None Include="ICON_이것만 쓰자\Windows Journal.ico" />
+    <None Include="ICON_이것만 쓰자\Windows Mail.ico" />
+    <None Include="ICON_이것만 쓰자\Windows Sidebar.ico" />
+    <None Include="ICON_이것만 쓰자\Wireless Adapter.ico" />
+    <None Include="ICON_이것만 쓰자\Wordpad file.ico" />
+    <None Include="ICON_이것만 쓰자\Wordpad.ico" />
+    <None Include="ICON_이것만 쓰자\Wrong.ico" />
+    <None Include="ICON_이것만 쓰자\ZIP Drive Error.ico" />
+    <None Include="ICON_이것만 쓰자\시스템 종료_0_4.ico" />
+    <Content Include="my_computer2.ico" />
+    <None Include="Resources\Stop.ico" />
+    <None Include="Resources\Shutdown.ico" />
+    <None Include="Resources\little pic.ico" />
+    <None Include="Resources\KEYS2.ICO" />
+    <None Include="Resources\Keys.ico" />
+    <None Include="Resources\Fonts.ico" />
+    <None Include="Resources\Folder1.ico" />
+    <None Include="Resources\floppy3.5.ico" />
+    <None Include="Resources\Find.ico" />
+    <None Include="Resources\Delete.ico" />
+    <None Include="Resources\Defrag.ico" />
+    <None Include="Resources\Cord4.ico" />
+    <None Include="Resources\Clean.ico" />
+    <None Include="Resources\Cab.ico" />
+    <None Include="Resources\Battery.ico" />
+    <None Include="Resources\App15.ico" />
+    <None Include="Resources\Administrative Tools.ico" />
+    <None Include="Resources\Add2.ico" />
+    <None Include="Resources\Add.ico" />
+    <None Include="Resources\0071.ico" />
+    <None Include="Resources\0065.ico" />
+    <None Include="Resources\0051.ico" />
+    <None Include="Resources\45.ICO" />
+    <None Include="Resources\0044.ico" />
+    <None Include="Resources\43.ICO" />
+    <None Include="Resources\0041.ico" />
+    <None Include="Resources\0040.ico" />
+    <None Include="Resources\38.ICO" />
+    <None Include="Resources\0032.ico" />
+    <None Include="Resources\31.ICO" />
+    <None Include="Resources\0030.ico" />
+    <None Include="Resources\29.ICO" />
+    <None Include="Resources\0028.ico" />
+    <None Include="Resources\0025.ico" />
+    <None Include="Resources\17.ICO" />
+    <None Include="Resources\6.ICO" />
+    <None Include="Resources\4.ICO" />
+    <None Include="Resources\0001.ico" />
+    <None Include="Resources\Search1.ico" />
+    <None Include="Resources\Run1.ico" />
+    <None Include="Resources\Notepad.ico" />
+    <None Include="Resources\utilman.ico" />
+    <None Include="Resources\223.ico" />
+    <None Include="Resources\Wrong.ico" />
+    <None Include="Resources\SD Card.ico" />
+    <None Include="Resources\Box.ico" />
+    <None Include="Resources\My Documents2.ico" />
+    <None Include="Resources\My Documents.ico" />
+    <None Include="Resources\Folder.ico" />
+    <None Include="Resources\My Music2.ico" />
+    <None Include="Resources\jpg file.ico" />
+    <None Include="Resources\Search.ico" />
+    <None Include="Resources\Run.ico" />
+    <None Include="Resources\Control Panel.ico" />
+    <None Include="Resources\프린터.ico" />
+    <None Include="Resources\폴더닫기.ico" />
+    <None Include="Resources\바탕화면.ico" />
+    <None Include="Resources\내컴퓨터.ico" />
+    <None Include="Resources\Note1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0%28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0%28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODS", "DAS\ODS.csproj", "{79ECAAEC-7457-4524-A6E1-4AA844571F9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79ECAAEC-7457-4524-A6E1-4AA844571F9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79ECAAEC-7457-4524-A6E1-4AA844571F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79ECAAEC-7457-4524-A6E1-4AA844571F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79ECAAEC-7457-4524-A6E1-4AA844571F9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4ECC089-A14F-4554-B667-CC2D6A94E28C}
+	EndGlobalSection
+EndGlobal
